@@ -1,0 +1,315 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Basic Body Styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 250px;
+  height: 100vh;
+  background: #222;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+}
+
+.sidebar .logo {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.sidebar .logo h1 {
+  color: #f4a261;
+  font-size: 24px;
+}
+
+/* Navigation Menu in Sidebar */
+.nav-links {
+  list-style: none;
+  padding: 0;
+}
+
+.nav-links li {
+  margin-bottom: 20px;
+}
+
+.nav-links li a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 4px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Pop-Up Animation on Hover */
+.nav-links li a:hover {
+  background-color: #333;
+  transform: translateY(-3px);
+}
+
+/* Active Link Styling */
+.nav-links li a.active {
+  background-color: #f4a261;
+  color: #222;
+}
+
+/* Main Content Area */
+.main-content {
+  margin-left: 250px;
+  padding: 40px;
+}
+
+/* Page Section Styling */
+.page-section {
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.5s ease;
+}
+
+.page-section h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+/* Video Container for Projects */
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 Ratio */
+  height: 0;
+  overflow: hidden;
+  margin-top: 15px;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  /* Hide sidebar by default on small screens */
+  .sidebar {
+    transform: translateX(-100%);
+  }
+  
+  /* When sidebar is toggled (active), show it */
+  .sidebar.active {
+    transform: translateX(0);
+  }
+
+  .main-content {
+    margin-left: 0;
+    padding: 20px;
+  }
+
+  /* Toggle button styling */
+  .toggle-sidebar-btn {
+    display: block;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: #f4a261;
+    color: #222;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 4px;
+    z-index: 110;
+    cursor: pointer;
+  }
+}
+
+/* Hide toggle button on wider screens */
+@media (min-width: 769px) {
+  .toggle-sidebar-btn {
+    display: none;
+  }
+}
+/* Photo Section Image Styling */
+#photo img {
+  width: 200px;       
+  height: 300px;     
+  object-fit: cover;  
+  display: inline;
+  margin: 20px auto;  /* Centers the image and adds spacing */
+  border-radius: 8px; /* Optional: rounds the corners */
+}
+
+.employment-entry {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.employment-entry h3 {
+  color: #222;
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+.employment-dates {
+  font-style: italic;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.employment-entry p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+/* Responsive Video Embed*/
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; 
+  height: 0;
+  overflow: hidden;
+  margin-top: 15px;
+}
+
+.video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+/* Certifications Section Styling */
+.certifications {
+  margin-top: 40px;
+}
+
+.certifications h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.certification-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.certification-item {
+  flex: 1 1 220px; /* Adjusts to display nicely on wider screens */
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.certification-item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.certification-item h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.certification-item p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #555;
+}
+/* --- Skills Section Styling --- */
+.skills {
+  margin-top: 30px;
+}
+
+.skills h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.skill-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill {
+  background-color: #f4a261;
+  color: #222;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.skill:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* --- Resume Section Styling --- */
+.resume-section {
+  margin-top: 40px;
+}
+
+.resume-section h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.resume-container {
+  margin-bottom: 15px;
+}
+
+.resume-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.cta-btn {
+  display: inline-block;
+  background: #f4a261;
+  color: #222;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.cta-btn:hover {
+  background: #e38b3b;
+}
+

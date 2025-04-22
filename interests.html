@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Interests - Data-Driven Developer Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Fixed Left Sidebar -->
+  <div class="sidebar">
+    <div class="logo">
+      <h1>My Portfolio</h1>
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <!-- Mark Interests as active -->
+        <li><a href="interests.html" class="active">Interests</a></li>
+        <li><a href="education.html">Education</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- Main Content Area -->
+  <div class="main-content">
+    <button class="toggle-sidebar-btn">Menu</button>
+    
+    <!-- Interests Introduction Section -->
+    <section id="interests" class="page-section">
+      <h2>Interests & Skills</h2>
+      <p>
+        Beyond my technical expertise, I am passionate about continuous learning, creative problem solving,
+        and collaboration. I enjoy exploring the latest technology trends and applying innovative solutions
+        to real-world challenges.
+      </p>
+      
+      <!-- Skills Section -->
+      <div class="skills">
+        <h3>Skills</h3>
+        <div class="skill-container">
+          <div class="skill">SQL / T-SQL</div>
+          <div class="skill">Data Analysis</div>
+          <div class="skill">Report Development</div>
+          <div class="skill">HTML</div>
+          <div class="skill">CSS</div>
+          <div class="skill">Javascript</div>
+          <div class="skill">Python</div>
+          <div class="skill">Java</div>
+          <div class="skill">Excel</div>
+          <div class="skill">Office Suite</div>
+          <div class="skill">Cross-Functional Collaboration</div>
+          <div class="skill">Adaptability</div>
+          <div class="skill">Problem Solving</div>
+          <div class="skill">Self-Initiative</div>
+  
+        </div>
+      </div>
+      
+      <!-- Resume Section -->
+      <div class="resume-section">
+        <h3>My Resume</h3>
+        <p>Below is a preview of my resume. You can print it or download the full PDF.</p>
+        <br>
+        <div class="resume-container">
+          <!-- Embedding your PDF resume. Adjust the file name if necessary -->
+          <object data="Resume_VictorMC (1).pdf" type="application/pdf" width="100%" height="500">
+            <p>Your browser does not support PDFs.
+              <a href="Resume_VictorMC (1).pdf" target="_blank">Download the PDF</a>.
+            </p>
+          </object>
+        </div>
+        <div class="resume-buttons">
+          <a href="Resume_VictorMC (1).pdf" class="cta-btn" download>Download Resume</a>
+          <a href="javascript:window.print()" class="cta-btn">Print Resume</a>
+        </div>
+      </div>
+      
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
